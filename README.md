@@ -1,11 +1,14 @@
 # hey-niia's Homebrew tap
 
-Casks for my own small Mac apps. They're unsigned/unnotarized (indie side
-projects, not worth an Apple Developer subscription), which is exactly why
-this tap is useful: installing via `brew install --cask` downloads the app
-with `curl` instead of a browser, so macOS never applies the quarantine flag
-that triggers the "Apple could not verify this app" Gatekeeper warning on a
-direct dmg download.
+Casks for my own small Mac apps, for convenient install/upgrade/uninstall via
+`brew`.
+
+**Note:** these apps are unsigned/unnotarized (indie side projects, not worth
+an Apple Developer subscription). Installing via this tap does **not** avoid
+the macOS "Apple could not verify this app" Gatekeeper warning — `spctl`
+rejects an ad-hoc-signed app regardless of how it was downloaded. You'll still
+need to right-click → Open on first launch, or run `xattr -cr` on the
+installed app.
 
 ## Install
 
